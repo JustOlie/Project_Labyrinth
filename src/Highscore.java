@@ -1,27 +1,20 @@
 import java.util.ArrayList;
-import java.util.List;
-public class Highscore extends Player {
-    private List<Long> scores; // Lijst van scores
+
+public class Highscore {
+    private ArrayList<String> scores;
 
     // Constructor
-    public Highscore(String name, String difficulty, List<Long> scores) {
-        super(name, difficulty);
-        this.scores = new ArrayList<>(scores); // Defensieve kopie
+    public Highscore() {
+        scores = new ArrayList<>();
     }
 
-    // Methode om een score toe te voegen
-    public void addScore(long score) {
-        scores.add(score);
+    // Add a score
+    public void addScore(String name, String difficulty, long time) {
+        scores.add(name + " - " + difficulty + " - " + time + "ms");
     }
 
-    // Getter voor scores
-    public List<Long> getScores() {
-        return new ArrayList<>(scores); // Defensieve kopie
-    }
-
-    // toString Method
-    @Override
-    public String toString() {
-        return super.toString() + ", Highscores=" + scores;
+    // Get all scores
+    public ArrayList<String> getScores() {
+        return scores;
     }
 }
