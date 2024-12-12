@@ -25,9 +25,4 @@ public class Player {
         this.difficulty = difficulty;
     }
 
-    // toString Method
-    @Override
-    public String toString() {
-        return "Player{name='" + name + "', difficulty='" + difficulty + "'}";
-    }
 }
