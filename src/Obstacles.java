@@ -1,11 +1,9 @@
-public class Obstacles {
+public enum Obstacles {
 
-    enum obstacles {
         EMPTY,
         WALL,
         ENTRY,
         EXIT,
-        PLAYER;
-    }
+        PLAYER,
 
 }
